@@ -6,7 +6,6 @@ pub struct TemplateApp {
     label: String,
 
     // this how you opt-out of serialization of a member
-    #[serde(skip)]
     value: f32,
 }
 
@@ -104,11 +103,11 @@ impl eframe::App for TemplateApp {
             egui::warn_if_debug_build(ui);
         });
 
-        egui::Window::new("Window").show(ctx, |ui| {
-            ui.label("Windows can be moved by dragging them.");
-            ui.label("They are automatically sized based on contents.");
-            ui.label("You can turn on resizing and scrolling if you like.");
-            ui.label("You would normally chose either panels OR windows.");
-        });
+    egui::Window::new("A Window").show(ctx, |ui| {
+        ui.label("Windows can be moved by dragging them.");
+        ui.label("They are automatically sized based on contents.");
+        ui.label("You can turn on resizing and scrolling if you like.");
+        ui.label("You would normally chose either panels OR windows.");
+    });
     }
 }
