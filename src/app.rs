@@ -4,8 +4,6 @@
 pub struct TemplateApp {
     // Example stuff:
     label: String,
-
-    // this how you opt-out of serialization of a member
     value: f32,
 }
 
